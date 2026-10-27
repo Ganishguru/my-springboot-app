@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-
-    @GetMapping("/api/hello")
-    public String sayHello() {
-        return "Hello from Enterprise Spring Boot on Java 25!";
+    @GetMapping("/")
+    public String hello() {
+        return "Hello from Spring Boot!";
     }
 }
