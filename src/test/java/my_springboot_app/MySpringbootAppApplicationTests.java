@@ -1,4 +1,4 @@
-package my_springboot_app;
+package com.ganish.myspringboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
