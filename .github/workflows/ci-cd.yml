@@ -30,9 +30,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # Step 3: Run Maven tests & build the executable JAR
+      # Step 3: Grant execution permissions to Maven wrapper and build
       - name: Build with Maven
-        run: ./mvnw clean package -DskipTests=false
+        run: |
+          chmod +x mvnw
+          ./mvnw clean package -DskipTests=false
 
       # Step 4: Set up Docker Buildx (for advanced multi-platform/caching builds)
       - name: Set up Docker Buildx
